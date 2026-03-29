@@ -6,9 +6,15 @@
 <title>Jaiswal Vastra Store</title>
 
 <style>
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 body {
     margin:0;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Poppins', sans-serif;
+    background:#ffffff;
+    color:#333;
 }
 
 /* HEADER */
@@ -16,112 +22,93 @@ header {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
+    padding:15px 60px;
     position:fixed;
     width:100%;
     background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 15px rgba(0,0,0,0.05);
     z-index:1000;
 }
 
-.logo img { height:60px; }
+.logo img { height:65px; }
 
 nav a {
-    margin:0 15px;
+    margin:0 18px;
     text-decoration:none;
     color:#333;
-    font-weight:600;
+    font-weight:500;
+    transition:0.3s;
 }
 
+nav a:hover {
+    color:#ff6a00;
+}
+
+/* BUTTON */
 .btn {
-    background:#ff6a00;
+    background:linear-gradient(45deg,#ff6a00,#ff8c00);
     color:white;
-    padding:10px 20px;
-    border-radius:5px;
+    padding:12px 25px;
+    border-radius:30px;
     text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn:hover {
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(255,106,0,0.4);
 }
 
 /* HERO */
-.hero {
-    height:100vh;
-    position:relative;
-    overflow:hidden;
-}
-
-.slide {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center;
-    animation:fade 15s infinite;
-}
-
-.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1583391733956-6c78276477e1');}
-.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1593032465171-8c9b6eecdd2d'); animation-delay:5s;}
-.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1618354691321-e851c56960d3'); animation-delay:10s;}
-
-@keyframes fade {
-    0%{opacity:1;}
-    33%{opacity:0;}
-    66%{opacity:0;}
-    100%{opacity:1;}
-}
-
 .hero-content {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:white;
     background:rgba(0,0,0,0.6);
-    padding:40px;
-    border-radius:10px;
+    padding:50px;
+    border-radius:12px;
 }
 
-.hero-content h1 { font-size:50px; }
-.hero-content p { font-size:20px; }
+.hero-content h1 {
+    font-size:55px;
+    font-weight:700;
+}
 
-.badge {
-    background:#ff6a00;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    display:inline-block;
-    margin-bottom:10px;
+.hero-content p {
+    font-size:20px;
 }
 
 /* SECTION */
 .section {
-    padding:80px 20px;
+    padding:100px 20px;
     text-align:center;
 }
 
 .section h2 {
     color:#ff6a00;
+    margin-bottom:20px;
+    font-size:32px;
 }
 
 /* TRUST STRIP */
 .trust-strip {
     background:#ff6a00;
     color:white;
+    padding:60px 20px;
 }
 
 /* CARDS */
-.cards {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
 .card {
-    width:260px;
-    margin:15px;
-    border-radius:10px;
+    width:270px;
+    margin:20px;
+    border-radius:12px;
     overflow:hidden;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    background:#fff;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -131,30 +118,29 @@ nav a {
 }
 
 /* GALLERY */
-.gallery {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
 .gallery img {
     width:280px;
-    margin:10px;
-    border-radius:10px;
+    margin:12px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.gallery img:hover {
+    transform:scale(1.05);
 }
 
 /* MAP */
 iframe {
-    width:100%;
-    height:300px;
-    border:0;
+    border-radius:10px;
 }
 
 /* FOOTER */
 footer {
     background:#ff6a00;
     color:white;
-    padding:20px;
+    padding:25px;
+    text-align:center;
+    font-size:14px;
 }
 
 /* WHATSAPP */
@@ -167,7 +153,14 @@ footer {
     padding:15px;
     border-radius:50%;
     text-decoration:none;
+    font-size:22px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
+
+.whatsapp:hover {
+    transform:scale(1.1);
+}
+
 </style>
 </head>
 
