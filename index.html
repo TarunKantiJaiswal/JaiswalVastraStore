@@ -9,8 +9,6 @@
 body {
     margin:0;
     font-family:'Segoe UI', sans-serif;
-    background:#fff;
-    color:#333;
 }
 
 /* HEADER */
@@ -19,16 +17,14 @@ header {
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
-    background:#fff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    position:sticky;
-    top:0;
+    position:fixed;
+    width:100%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
-.logo img {
-    height:60px;
-}
+.logo img { height:60px; }
 
 nav a {
     margin:0 15px;
@@ -45,49 +41,68 @@ nav a {
     text-decoration:none;
 }
 
-/* HERO */
+/* HERO SLIDER */
 .hero {
-    height:90vh;
-    background:url('https://images.unsplash.com/photo-1593032457861-54b6b30c9c85') center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
 }
 
-.hero-box {
+.slide {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    animation:fade 15s infinite;
+}
+
+.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1583391733956-6c78276477e1');}
+.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1593032465171-8c9b6eecdd2d'); animation-delay:5s;}
+.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1618354691321-e851c56960d3'); animation-delay:10s;}
+
+@keyframes fade {
+    0%{opacity:1;}
+    33%{opacity:0;}
+    66%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.hero-content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
     background:rgba(0,0,0,0.6);
-    padding:50px;
+    padding:40px;
     border-radius:10px;
 }
 
-.hero h1 {
-    font-size:50px;
-}
-
-.hero p {
-    font-size:22px;
-}
-
-/* BADGE */
-.badge {
-    background:#ff6a00;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    display:inline-block;
-    margin-bottom:10px;
-}
+.hero-content h1 { font-size:50px; }
+.hero-content p { font-size:22px; }
 
 /* SECTION */
 .section {
-    padding:60px 20px;
+    padding:80px 20px;
     text-align:center;
 }
 
 .section h2 {
     color:#ff6a00;
+}
+
+/* STATS */
+.stats {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.stat {
+    margin:20px;
+    font-size:22px;
 }
 
 /* CARDS */
@@ -103,8 +118,6 @@ nav a {
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
-    background:#fff;
 }
 
 .card img {
@@ -113,24 +126,24 @@ nav a {
     object-fit:cover;
 }
 
-.card h3 {
-    padding:10px;
+/* GALLERY GRID */
+.gallery {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
-.card:hover {
-    transform:translateY(-10px);
-}
-
-/* TRUST */
-.trust {
-    background:#fff5ee;
-}
-
-/* GALLERY */
 .gallery img {
-    width:300px;
+    width:280px;
     margin:10px;
     border-radius:10px;
+}
+
+/* MAP */
+iframe {
+    width:100%;
+    height:300px;
+    border:0;
 }
 
 /* FOOTER */
@@ -138,7 +151,6 @@ footer {
     background:#ff6a00;
     color:white;
     padding:20px;
-    text-align:center;
 }
 
 /* WHATSAPP */
@@ -151,7 +163,6 @@ footer {
     padding:15px;
     border-radius:50%;
     text-decoration:none;
-    font-size:20px;
 }
 </style>
 </head>
@@ -175,10 +186,13 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-box">
-<div class="badge">Since 1964</div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+
+<div class="hero-content">
 <h1>Jaiswal Vastra Store</h1>
-<p>Best Quality Cloth at Wholesale Price</p>
+<p>Since 1964 | Best Quality Cloth at Wholesale Price</p>
 <a href="https://wa.me/919935699572" class="btn">Shop Now</a>
 </div>
 </section>
@@ -186,19 +200,17 @@ footer {
 <!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Us</h2>
-<p>
-Jaiswal Vastra Store is a trusted cloth shop in Handia serving customers since 1964.  
-We provide high-quality fabrics for both retail and wholesale buyers at the best prices.
-</p>
+<p>Serving Handia market since 1964, we are trusted for quality fabrics and wholesale pricing.</p>
 </section>
 
-<!-- TRUST -->
-<section class="section trust">
-<h2>Why Customers Trust Us</h2>
-<p>✔ 60+ Years of Experience</p>
-<p>✔ Retail & Wholesale Available</p>
-<p>✔ Premium Quality Cloth</p>
-<p>✔ Trusted in Galla Mandi</p>
+<!-- STATS -->
+<section class="section">
+<h2>Our Legacy</h2>
+<div class="stats">
+<div class="stat">60+ Years Experience</div>
+<div class="stat">1000+ Customers</div>
+<div class="stat">Wholesale Specialist</div>
+</div>
 </section>
 
 <!-- CATEGORIES -->
@@ -206,42 +218,30 @@ We provide high-quality fabrics for both retail and wholesale buyers at the best
 <h2>Our Categories</h2>
 
 <div class="cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1">
-<h3>Saree Collection</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593032465171-8c9b6eecdd2d">
-<h3>Suit Collection</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1618354691321-e851c56960d3">
-<h3>Lehenga</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975922284-9e0e4e3f2c2d">
-<h3>Men Wear</h3>
-</div>
-
+<div class="card"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1"></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1593032465171-8c9b6eecdd2d"></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1618354691321-e851c56960d3"></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1520975922284-9e0e4e3f2c2d"></div>
 </div>
 </section>
 
 <!-- GALLERY -->
-<section class="section gallery">
+<section class="section">
 <h2>Our Collection</h2>
+<div class="gallery">
 <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
 <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
 <img src="https://images.unsplash.com/photo-1593032457861-54b6b30c9c85">
+</div>
 </section>
 
-<!-- CONTACT -->
+<!-- MAP -->
 <section class="section" id="contact">
 <h2>Visit Our Store</h2>
-<p>📍 Baraut Bazaar (Galla Mandi), Handia, Prayagraj</p>
+<p>Baraut Bazaar, Handia, Prayagraj</p>
+
+<iframe src="https://maps.google.com/maps?q=Handia%20Prayagraj&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
 <p>📞 9935699572 / 9335667224</p>
 </section>
 
