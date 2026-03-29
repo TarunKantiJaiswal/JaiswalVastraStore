@@ -19,7 +19,7 @@ header {
     padding:15px 40px;
     position:fixed;
     width:100%;
-    background:rgba(255,255,255,0.9);
+    background:rgba(255,255,255,0.95);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
@@ -41,7 +41,7 @@ nav a {
     text-decoration:none;
 }
 
-/* HERO SLIDER */
+/* HERO */
 .hero {
     height:100vh;
     position:relative;
@@ -81,7 +81,16 @@ nav a {
 }
 
 .hero-content h1 { font-size:50px; }
-.hero-content p { font-size:22px; }
+.hero-content p { font-size:20px; }
+
+.badge {
+    background:#ff6a00;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    display:inline-block;
+    margin-bottom:10px;
+}
 
 /* SECTION */
 .section {
@@ -93,16 +102,10 @@ nav a {
     color:#ff6a00;
 }
 
-/* STATS */
-.stats {
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.stat {
-    margin:20px;
-    font-size:22px;
+/* TRUST STRIP */
+.trust-strip {
+    background:#ff6a00;
+    color:white;
 }
 
 /* CARDS */
@@ -118,6 +121,7 @@ nav a {
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    background:#fff;
 }
 
 .card img {
@@ -126,7 +130,7 @@ nav a {
     object-fit:cover;
 }
 
-/* GALLERY GRID */
+/* GALLERY */
 .gallery {
     display:flex;
     flex-wrap:wrap;
@@ -169,6 +173,7 @@ footer {
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div class="logo">
 <img src="logo.png">
@@ -191,26 +196,42 @@ footer {
 <div class="slide"></div>
 
 <div class="hero-content">
+<div class="badge">Since 1964 • Trusted by Generations</div>
 <h1>Jaiswal Vastra Store</h1>
-<p>Since 1964 | Best Quality Cloth at Wholesale Price</p>
-<a href="https://wa.me/919935699572" class="btn">Shop Now</a>
+<p>Best Quality Cloth at Wholesale Price</p>
+<p>Retail Customers | Wholesale Buyers Welcome</p>
+
+<div style="margin-top:20px;">
+<a href="https://wa.me/919935699572" class="btn">Wholesale Inquiry</a>
+<a href="tel:9935699572" class="btn">Call Now</a>
 </div>
+</div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="section trust-strip">
+<h2>Serving Since 1964</h2>
+<p>✔ 60+ Years Legacy</p>
+<p>✔ Trusted by Thousands</p>
+<p>✔ Retail & Wholesale Experts</p>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Us</h2>
-<p>Serving Handia market since 1964, we are trusted for quality fabrics and wholesale pricing.</p>
+<p>Jaiswal Vastra Store is a trusted cloth shop in Handia serving since 1964. We provide premium fabrics for retail & wholesale customers.</p>
 </section>
 
-<!-- STATS -->
-<section class="section">
-<h2>Our Legacy</h2>
-<div class="stats">
-<div class="stat">60+ Years Experience</div>
-<div class="stat">1000+ Customers</div>
-<div class="stat">Wholesale Specialist</div>
-</div>
+<!-- WHOLESALE -->
+<section class="section" style="background:#fff3e6;">
+<h2>Wholesale Specialist</h2>
+<p>We provide bulk cloth supply for shop owners & resellers at best rates.</p>
+
+<p>✔ Bulk Orders Available</p>
+<p>✔ Best Margin for Resellers</p>
+<p>✔ Direct Supply</p>
+
+<a href="https://wa.me/919935699572" class="btn">Contact for Wholesale</a>
 </section>
 
 <!-- CATEGORIES -->
@@ -235,21 +256,29 @@ footer {
 </div>
 </section>
 
-<!-- MAP -->
+<!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Visit Our Store</h2>
+
 <p><strong>Jaiswal Vastra Store</strong></p>
 <p>📍 Baraut Bazaar (Galla Mandi), Handia, Prayagraj - 221502</p>
 <p>🕒 Open Daily: 8 AM – 10 PM</p>
 <p>📞 9935699572 / 9335667224</p>
-<a href="https://www.google.com/maps/dir/?api=1&destination=Jaiswal+Vastra+Store+Baraut+Handia+Prayagraj" 
-class="btn" target="_blank">Get Directions</a>
+
+<a href="https://www.google.com/maps/dir/?api=1&destination=Jaiswal+Vastra+Store+Baraut+Handia+Prayagraj" class="btn" target="_blank">Get Directions</a>
+
+<br><br>
+
+<iframe src="https://www.google.com/maps?q=25.336834,82.2668159&z=15&output=embed"></iframe>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Jaiswal Vastra Store | Since 1964
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/919935699572" class="whatsapp">💬</a>
 
 </body>
