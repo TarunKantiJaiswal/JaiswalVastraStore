@@ -9,26 +9,49 @@
 body {
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background:#0b0b0b;
-    color:white;
+    background:#ffffff;
+    color:#333;
 }
 
+/* HEADER */
 header {
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:15px 40px;
-    background:#000;
-    position:sticky;
-    top:0;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1 {
+.logo {
+    display:flex;
+    align-items:center;
+}
+
+.logo img {
+    height:50px;
+    margin-right:10px;
+}
+
+.logo h1 {
     color:#ff6a00;
+    font-size:22px;
 }
 
+.nav-btn a {
+    margin-left:10px;
+    padding:10px 20px;
+    background:#ff6a00;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* HERO */
 .hero {
     height:90vh;
-    background:url('https://images.unsplash.com/photo-1603252109303-2751441dd157') center/cover;
+    background:linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url('https://images.unsplash.com/photo-1603252109303-2751441dd157') center/cover;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -37,12 +60,12 @@ header h1 {
 }
 
 .hero h2 {
-    font-size:50px;
+    font-size:45px;
+    color:#ff6a00;
 }
 
 .hero p {
     font-size:20px;
-    margin:10px 0;
 }
 
 .btn {
@@ -54,11 +77,17 @@ header h1 {
     border-radius:5px;
 }
 
+/* SECTIONS */
 .section {
     padding:60px 20px;
     text-align:center;
 }
 
+.section h2 {
+    color:#ff6a00;
+}
+
+/* CARDS */
 .cards {
     display:flex;
     flex-wrap:wrap;
@@ -70,7 +99,8 @@ header h1 {
     margin:15px;
     border-radius:10px;
     overflow:hidden;
-    background:#111;
+    background:#fff;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
@@ -80,16 +110,35 @@ header h1 {
     object-fit:cover;
 }
 
-.card:hover {
-    transform:scale(1.05);
+.card h3 {
+    padding:10px;
 }
 
+.card:hover {
+    transform:translateY(-5px);
+}
+
+/* GALLERY */
 .gallery img {
     width:300px;
     margin:10px;
     border-radius:10px;
 }
 
+/* CONTACT */
+.contact p {
+    margin:5px;
+}
+
+/* FOOTER */
+footer {
+    background:#ff6a00;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* WHATSAPP BUTTON */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -99,54 +148,62 @@ header h1 {
     padding:15px;
     border-radius:50%;
     text-decoration:none;
-}
-
-footer {
-    background:#000;
-    padding:20px;
-    text-align:center;
+    font-size:20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
+<div class="logo">
+<img src="logo.png" alt="logo">
 <h1>Jaiswal Vastra Store</h1>
-<div>
-<a href="tel:9935699572" class="btn">Call</a>
-<a href="https://wa.me/919935699572" class="btn">WhatsApp</a>
+</div>
+
+<div class="nav-btn">
+<a href="tel:9935699572">Call</a>
+<a href="https://wa.me/919935699572">WhatsApp</a>
 </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <h2>Best Quality Cloth at Wholesale Price</h2>
 <p>Retail & Thok Kapde Ek Hi Jagah</p>
 <a href="#contact" class="btn">Visit Store</a>
 </section>
 
+<!-- CATEGORIES -->
 <section class="section">
 <h2>Our Categories</h2>
 <div class="cards">
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1">
 <h3>Saree</h3>
 </div>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1593032465171-8c9b6eecdd2d">
 <h3>Suit</h3>
 </div>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1618354691321-e851c56960d3">
 <h3>Lehenga</h3>
 </div>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1520975922284-9e0e4e3f2c2d">
 <h3>Men Wear</h3>
 </div>
+
 </div>
 </section>
 
+<!-- WHY US -->
 <section class="section">
 <h2>Why Choose Us</h2>
 <p>✔ Premium Quality Fabric</p>
@@ -155,6 +212,7 @@ footer {
 <p>✔ Bulk Orders Accepted</p>
 </section>
 
+<!-- GALLERY -->
 <section class="section gallery">
 <h2>Our Collection</h2>
 <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
@@ -162,16 +220,19 @@ footer {
 <img src="https://images.unsplash.com/photo-1593032457861-54b6b30c9c85">
 </section>
 
-<section class="section" id="contact">
+<!-- CONTACT -->
+<section class="section contact" id="contact">
 <h2>Contact Us</h2>
 <p>📍 Baraut Bazaar (Galla Mandi), Handia, Prayagraj</p>
 <p>📞 9935699572 / 9335667224</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Jaiswal Vastra Store
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/919935699572" class="whatsapp">💬</a>
 
 </body>
