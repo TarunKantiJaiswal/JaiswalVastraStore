@@ -10,6 +10,7 @@ body {
     margin:0;
     font-family:'Segoe UI', sans-serif;
     background:#fff;
+    color:#333;
 }
 
 /* HEADER */
@@ -22,6 +23,7 @@ header {
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 .logo img {
@@ -32,7 +34,7 @@ nav a {
     margin:0 15px;
     text-decoration:none;
     color:#333;
-    font-weight:500;
+    font-weight:600;
 }
 
 .btn {
@@ -56,16 +58,26 @@ nav a {
 
 .hero-box {
     background:rgba(0,0,0,0.6);
-    padding:40px;
+    padding:50px;
     border-radius:10px;
 }
 
 .hero h1 {
-    font-size:45px;
+    font-size:50px;
 }
 
 .hero p {
-    font-size:20px;
+    font-size:22px;
+}
+
+/* BADGE */
+.badge {
+    background:#ff6a00;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    display:inline-block;
+    margin-bottom:10px;
 }
 
 /* SECTION */
@@ -90,8 +102,9 @@ nav a {
     margin:15px;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
     transition:0.3s;
+    background:#fff;
 }
 
 .card img {
@@ -111,6 +124,13 @@ nav a {
 /* TRUST */
 .trust {
     background:#fff5ee;
+}
+
+/* GALLERY */
+.gallery img {
+    width:300px;
+    margin:10px;
+    border-radius:10px;
 }
 
 /* FOOTER */
@@ -140,11 +160,12 @@ footer {
 
 <header>
 <div class="logo">
-<img src="logo.png.jpeg">
+<img src="logo.png">
 </div>
 
 <nav>
 <a href="#">Home</a>
+<a href="#about">About</a>
 <a href="#category">Categories</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -152,22 +173,35 @@ footer {
 <a href="tel:9935699572" class="btn">Call Now</a>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-box">
+<div class="badge">Since 1964</div>
 <h1>Jaiswal Vastra Store</h1>
 <p>Best Quality Cloth at Wholesale Price</p>
 <a href="https://wa.me/919935699572" class="btn">Shop Now</a>
 </div>
 </section>
 
-<section class="section trust">
-<h2>Why Customers Trust Us</h2>
-<p>✔ Retail & Wholesale Available</p>
-<p>✔ Best Quality Cloth</p>
-<p>✔ Trusted Shop in Galla Mandi</p>
-<p>✔ Bulk Orders Accepted</p>
+<!-- ABOUT -->
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>
+Jaiswal Vastra Store is a trusted cloth shop in Handia serving customers since 1964.  
+We provide high-quality fabrics for both retail and wholesale buyers at the best prices.
+</p>
 </section>
 
+<!-- TRUST -->
+<section class="section trust">
+<h2>Why Customers Trust Us</h2>
+<p>✔ 60+ Years of Experience</p>
+<p>✔ Retail & Wholesale Available</p>
+<p>✔ Premium Quality Cloth</p>
+<p>✔ Trusted in Galla Mandi</p>
+</section>
+
+<!-- CATEGORIES -->
 <section class="section" id="category">
 <h2>Our Categories</h2>
 
@@ -196,6 +230,15 @@ footer {
 </div>
 </section>
 
+<!-- GALLERY -->
+<section class="section gallery">
+<h2>Our Collection</h2>
+<img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf">
+<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+<img src="https://images.unsplash.com/photo-1593032457861-54b6b30c9c85">
+</section>
+
+<!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Visit Our Store</h2>
 <p>📍 Baraut Bazaar (Galla Mandi), Handia, Prayagraj</p>
@@ -203,7 +246,7 @@ footer {
 </section>
 
 <footer>
-© 2026 Jaiswal Vastra Store
+© 2026 Jaiswal Vastra Store | Since 1964
 </footer>
 
 <a href="https://wa.me/919935699572" class="whatsapp">💬</a>
